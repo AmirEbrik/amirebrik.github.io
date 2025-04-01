@@ -18,11 +18,28 @@
         }
 
         .software-card {
-            transition: transform 0.3s;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.125);
         }
 
         .software-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .list-unstyled li {
+            line-height: 1.6;
+            padding: 4px 0;
+        }
+
+        .alert-warning {
+            background-color: rgba(255, 193, 7, 0.15);
+            border-color: rgba(255, 193, 7, 0.3);
         }
 
         .whatsapp-btn {
@@ -32,6 +49,14 @@
 
         .whatsapp-btn:hover {
             background-color: #128C7E;
+        }
+
+        .text-smaller {
+            font-size: 0.85rem;
+        }
+
+        .alert-warning small {
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -79,34 +104,63 @@
 
             <div class="row g-4">
                 <!-- إشرافي سوفت -->
-                <div class="col-md-6">
-                    <div class="card software-card h-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
+                <div class="col-lg-6">
+                    <div class="card software-card h-100 shadow-sm">
+                        <div class="card-header bg-transparent border-0 pt-4">
+                            <div class="d-flex align-items-center">
                                 <i class="bi bi-building fs-1 text-primary ms-3"></i>
                                 <div>
-                                    <h3 class="card-title mb-0">إشرافي سوفت</h3>
-                                    <div class="text-warning fs-4 fw-bold">350,000 ل.س/سنويًا</div>
+                                    <h3 class="card-title mb-1">إشرافي سوفت</h3>
+                                    <div class="text-warning fs-3 fw-bold">350,000 ل.س/سنويًا</div>
                                 </div>
                             </div>
-                            <p class="card-text">
-                                نظام إدارة المدارس الشامل الذي يوفر:
-                            <ul>
-                                <li>إدارة الطلاب والشعب الصفية</li>
-                                <li>تتبع الحضور والغياب اليومي</li>
-                                <li>تنظيم الجداول الدراسية والامتحانات</li>
-                                <li>تقارير أكاديمية ومالية تلقائية</li>
-                            </ul>
-                            </p>
-                            <div class="row g-2 mt-4">
-                                <div class="col-6">
-                                    <a href="https://www.youtube.com/watch?v=SGJY-OQDNdM" class="btn btn-outline-primary w-100">
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="mb-4">
+                                <p class="text-muted mb-3">نظام إدارة المدارس الشامل الذي يوفر:</p>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2 d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        إدارة الطلاب والشعب الصفية
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        تتبع الحضور والغياب اليومي
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        تنظيم جداول الدوام والامتحانات
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        تقارير أكاديمية ومالية تلقائية
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="border-top pt-4">
+                                <div class="mb-3">
+                                    <a href="https://drive.google.com/file/d/1dSmfSsRIbdMeRhNKQ7ZAgunu4x74netq/view?usp=drive_link" class="btn btn-success w-100 py-2">
+                                        <i class="bi bi-download ms-2"></i>تنزيل النسخة التجريبية
+                                    </a>
+                                    <div class="mt-2 text-muted small d-flex justify-content-between">
+                                        <span>الإصدار 2.0.0</span>
+                                        <span>حجم الملف: 11 MB</span>
+                                        <span>Windows 10/11</span>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning small mb-3 py-2">
+                                    <i class="bi bi-exclamation-triangle-fill ms-2"></i>
+                                    النسخة التجريبية محدودة بعدد 30 طالب فقط
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <a href="https://www.youtube.com/watch?v=SGJY-OQDNdM&t=3s" class="btn btn-outline-primary">
                                         <i class="bi bi-play-circle ms-2"></i>استعرض البرنامج
                                     </a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="https://wa.me/963959049986" class="btn whatsapp-btn w-100">
-                                        <i class="bi bi-whatsapp ms-2"></i> اطلب الآن
+                                    <a href="https://wa.me/963959049986" class="btn whatsapp-btn">
+                                        <i class="bi bi-whatsapp ms-2"></i>اطلب الترخيص
                                     </a>
                                 </div>
                             </div>
@@ -115,34 +169,63 @@
                 </div>
 
                 <!-- حسابي سوفت -->
-                <div class="col-md-6">
-                    <div class="card software-card h-100">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center mb-3">
+                <div class="col-lg-6">
+                    <div class="card software-card h-100 shadow-sm">
+                        <div class="card-header bg-transparent border-0 pt-4">
+                            <div class="d-flex align-items-center">
                                 <i class="bi bi-calculator fs-1 text-success ms-3"></i>
                                 <div>
-                                    <h3 class="card-title mb-0">حسابي سوفت</h3>
-                                    <div class="text-warning fs-4 fw-bold">75,000 ل.س/سنويًا</div>
+                                    <h3 class="card-title mb-1">حسابي سوفت</h3>
+                                    <div class="text-warning fs-3 fw-bold">75,000 ل.س/سنويًا</div>
                                 </div>
                             </div>
-                            <p class="card-text">
-                                نظام محاسبة مبسط يعمل بنظام الفواتير:
-                            <ul>
-                                <li>إدارة الفواتير والدفعات بسهولة ووضوح</li>
-                                <li>كشف أرصدة تلقائي مع تلوين توضيحي</li>
-                                <li>دعم متعدد العملات والتحويلات</li>
-                                <li>نسخ احتياطي آمن للبيانات</li>
-                            </ul>
-                            </p>
-                            <div class="row g-2 mt-4">
-                                <div class="col-6">
-                                    <a href="https://www.youtube.com/watch?v=IVAymwR1CfM" class="btn btn-outline-primary w-100">
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="mb-4">
+                                <p class="text-muted mb-3">نظام محاسبة مبسط يعمل بنظام الفواتير:</p>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2 d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        إدارة الفواتير والدفعات بسهولة
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        كشف حسابات تلقائي مع تلوين توضيحي
+                                    </li>
+                                    <li class="mb-2 d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        دعم عملات متعددة وتحويل تلقائي
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <i class="bi bi-check2-circle text-success ms-2 mt-1"></i>
+                                        نسخ احتياطي آمن للبيانات
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="border-top pt-4">
+                                <div class="mb-3">
+                                    <a href="https://drive.google.com/file/d/1Bcj2CrzFCSy6VrjIRqPjcc2Fu_pK-TB9/view?usp=drive_link" class="btn btn-success w-100 py-2">
+                                        <i class="bi bi-download ms-2"></i>تنزيل النسخة التجريبية
+                                    </a>
+                                    <div class="mt-2 text-muted small d-flex justify-content-between">
+                                        <span>الإصدار 2.0.0</span>
+                                        <span>حجم الملف: 11 MB</span>
+                                        <span>Windows 10/11</span>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning small mb-3 py-2">
+                                    <i class="bi bi-exclamation-triangle-fill ms-2"></i>
+                                    النسخة التجريبية محدودة بعدد 3 حسابات فقط
+                                </div>
+
+                                <div class="d-grid gap-2">
+                                    <a href="https://www.youtube.com/watch?v=IVAymwR1CfM&t=5s" class="btn btn-outline-primary">
                                         <i class="bi bi-play-circle ms-2"></i>استعرض البرنامج
                                     </a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="https://wa.me/963959049986" class="btn whatsapp-btn w-100">
-                                        <i class="bi bi-whatsapp ms-2"></i>اطلب الآن
+                                    <a href="https://wa.me/963959049986" class="btn whatsapp-btn">
+                                        <i class="bi bi-whatsapp ms-2"></i>اطلب الترخيص
                                     </a>
                                 </div>
                             </div>
@@ -152,7 +235,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="bg-light py-5">
         <div class="container text-center">
